@@ -6,14 +6,14 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Getter@Setter
-public class Deliverly {
+@Getter @Setter
+public class Delivery {
 
     @Id @GeneratedValue
     @Column(name = "delivery_id")
     private Long id;
 
-    @OneToOne(mappedBy = "delivery")
+    @OneToOne(mappedBy = "delivery",fetch = FetchType.LAZY)
     private Order order;
 
     @Embedded

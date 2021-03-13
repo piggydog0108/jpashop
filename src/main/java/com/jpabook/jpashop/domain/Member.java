@@ -22,4 +22,7 @@ public class Member {
 
     @OneToMany(mappedBy = "member")//나는 연관관계 주인이 아니에요, 나는 매핑된 거울일뿐이야 read only
     private List<Order> orders = new ArrayList<>();
+
+
+
 }
